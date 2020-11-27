@@ -11,26 +11,51 @@
    <form #f="ngForm" class="form">
         <fieldset>
           <legend>Ajouter votre menu</legend>
-          <div class="form-group row">
-            <label for="staticEmail" class="col-sm-2 col-form-label">Nom Menu</label>
+          <div class="form-group row ">
+            <label  class="col-sm-2 col-form-label ">Nom Menu</label>
             <div class="col-sm-10">
-              <input type="text" name="nom_menu" [(ngModel)]="m.nom_menu" #nom_menu="ngModel" class="form-control-plaintext"  placeholder="Menu du jour.." required>
-              <div >
+              <input type="text" name="nom_menu" [(ngModel)]="m.nom_menu" minlength="3"  id="inputValid" #nom_menu="ngModel" class="form-control-plaintext form-control "  placeholder="Menu du jour.." required>
+              <div class="form-group has-danger" *ngIf="nom_menu.invalid" >
+                  <div class="form-group has-danger" *ngIf="nom_menu.touched && nom_menu.invalid">
+                    
+                      Désolé le nom de menu est invalide
+                  </div>
+                  <div *ngIf="nom_menu.errors?.minlength" class="form-group has-danger">
+                   Le nom doit contenir au moins 3 caractéres </div>
 
               </div>
-
+              
             </div>
           </div>
+        
           <div class="form-group row">
             <label for="staticEmail" class="col-sm-2 col-form-label">Nom plat</label>
             <div class="col-sm-10">
-              <input type="text" name="plats_nom" [(ngModel)]="m.plats_nom" #plats_nom="ngModel" class="form-control-plaintext"  placeholder="couscous par exemple.." required>
+              <input type="text" name="plats_nom" [(ngModel)]="m.plats_nom" #plats_nom="ngModel" minlength="4" class="form-control-plaintext"  placeholder="couscous par exemple.." required>
+              <div class="form-group has-danger" *ngIf="plats_nom.invalid" >
+                <div class="form-group has-danger" *ngIf="plats_nom.touched && plats_nom.invalid">
+                  
+                    Désolé le nom de votre plat est invalide
+                </div>
+                <div *ngIf="plats_nom.errors?.minlength" class="form-group has-danger">
+                 Le nom de votre plat doit contenir au moins 4 caractéres </div>
+
+            </div>
             </div>
           </div>
           <div class="form-group row">
             <label for="staticEmail" class="col-sm-2 col-form-label">Nom chef</label>
             <div class="col-sm-10">
-              <input type="text" name="chef" [(ngModel)]="m.chef" #chef="ngModel" class="form-control-plaintext"  placeholder="Chef Monroe par exemple.." required>
+              <input type="text" name="chef" [(ngModel)]="m.chef" #chef="ngModel" minlength="3" class="form-control-plaintext"  placeholder="Chef Monroe par exemple.." required>
+              <div class="form-group has-danger" *ngIf="chef.invalid" >
+                <div class="form-group has-danger" *ngIf="chef.touched && plats_nom.invalid">
+                  
+                    Désolé Votre nom est invalide
+                </div>
+                <div *ngIf="chef.errors?.minlength" class="form-group has-danger">
+                 Votre nom doit contenir au moins 4 caractéres </div>
+
+            </div>
             </div>
           </div>  
           <button type="submit" class="btn btn-success" (click)="save()" >Success</button>      
