@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menus</title>
+</head>
+<body>
+      
+
+       
+          <div class="q" *ngFor="let item of menus" style="max-width: 20rem;">
+
+<blockquote class="blockquote text-center" >
+  <h2>Menu du jour</h2>
+  <p class="mb-0">{{item.nom_menu}}</p>
+  <p>{{item.plats_nom}}</p>
+  <footer class="blockquote-footer">Chef Mr. <cite title="Source Title">{{item.chef}}</cite></footer>
+</blockquote>
+</div>
+</body>
+</html>

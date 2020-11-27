@@ -4,8 +4,9 @@ import { Plat } from './plat';
 
 export class Menu {
   id_menu: number;
-  plats: Plat;
-  chef: Chef;
+  nom_menu: string;
+  plats_nom: string;
+  chef: string;
   feedback: FeedBack;
 
 }

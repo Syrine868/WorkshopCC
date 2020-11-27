@@ -16,10 +16,19 @@
   "profile": {
     "name": "typicode"
   },
-  "plats":[
-
-  ],
-  "menu":[
-
+  "plats": [],
+  "menu": [
+    {
+      "nom_menu": "Valentine",
+      "plats_nom": "couscous",
+      "chef": "Dali",
+      "id": 1
+    },
+    {
+      "nom_menu": "Soirée privé",
+      "plats_nom": "Hamburger",
+      "chef": "Dali",
+      "id": 2
+    }
   ]
 }

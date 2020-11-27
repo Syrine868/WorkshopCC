@@ -1,0 +1,12 @@
+
+.q{
+    display: inline-flex;
+    flex-wrap: wrap ;
+    align-items: center;
+    align-content: space-between; 
+    margin-left: 20px; 
+
+    margin-top: 10px;
+    margin-right: 10px;
+    width: 200px;
+}
