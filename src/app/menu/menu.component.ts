@@ -25,4 +25,17 @@ export class MenuComponent implements OnInit {
 
   }
 
+  delete(id)
+  {
+    this.menuS.deletemenu(id).subscribe(
+      resultat => {
+        alert("menu deleted");
+        console.log("deleted");
+        this.router.navigateByUrl('/menu');
+      }, (err) => {
+        console.log(err);
+      }
+    );
+  }
+
 }

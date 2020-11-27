@@ -10,3 +10,9 @@
     margin-right: 10px;
     width: 200px;
 }
+
+.container_btns
+{
+    display:flex;
+    flex-wrap: wrap;
+}

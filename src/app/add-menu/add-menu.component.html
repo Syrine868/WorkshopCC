@@ -31,7 +31,7 @@
           <div class="form-group row">
             <label for="staticEmail" class="col-sm-2 col-form-label">Nom plat</label>
             <div class="col-sm-10">
-              <input type="text" name="plats_nom" [(ngModel)]="m.plats_nom" #plats_nom="ngModel" minlength="4" class="form-control-plaintext"  placeholder="couscous par exemple.." required>
+              <input type="text" name="plats_nom" [(ngModel)]="m.plats_nom" #plats_nom="ngModel" minlength="4" class="form-control-plaintext  form-control"  placeholder="couscous par exemple.." required>
               <div class="form-group has-danger" *ngIf="plats_nom.invalid" >
                 <div class="form-group has-danger" *ngIf="plats_nom.touched && plats_nom.invalid">
                   
@@ -46,7 +46,7 @@
           <div class="form-group row">
             <label for="staticEmail" class="col-sm-2 col-form-label">Nom chef</label>
             <div class="col-sm-10">
-              <input type="text" name="chef" [(ngModel)]="m.chef" #chef="ngModel" minlength="3" class="form-control-plaintext"  placeholder="Chef Monroe par exemple.." required>
+              <input type="text" name="chef" [(ngModel)]="m.chef" #chef="ngModel" minlength="3" class="form-control-plaintext  form-control"  placeholder="Chef Monroe par exemple.." required>
               <div class="form-group has-danger" *ngIf="chef.invalid" >
                 <div class="form-group has-danger" *ngIf="chef.touched && plats_nom.invalid">
                   

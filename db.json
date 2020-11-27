@@ -1,34 +1,11 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  },
   "plats": [],
   "menu": [
     {
-      "nom_menu": "Valentine",
+      "id": 3,
+      "nom_menu": "Apple",
       "plats_nom": "couscous",
-      "chef": "Dali",
-      "id": 1
-    },
-    {
-      "nom_menu": "Soirée privé",
-      "plats_nom": "Hamburger",
-      "chef": "Dali",
-      "id": 2
+      "chef": "test"
     }
   ]
 }

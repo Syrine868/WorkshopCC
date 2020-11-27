@@ -9,20 +9,23 @@ import { MenuComponent } from './menu/menu.component';
 import { PlatsComponent } from './plats/plats.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { AddMenuComponent } from './add-menu/add-menu.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { UpdateMenuComponent } from './update-menu/update-menu.component';
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     PlatsComponent,
     FeedbackComponent,
-    AddMenuComponent
+    AddMenuComponent,
+    UpdateMenuComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
