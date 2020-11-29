@@ -11,6 +11,10 @@ import { FeedbackComponent } from './feedback/feedback.component';
 import { AddMenuComponent } from './add-menu/add-menu.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { UpdateMenuComponent } from './update-menu/update-menu.component';
+import { TypeComponent } from './type/type.component';
+import { AddTypePlatComponent } from './add-type-plat/add-type-plat.component';
+import { UpdateTypePlatComponent } from './update-type-plat/update-type-plat.component';
+import { AddPlatComponent } from './add-plat/add-plat.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +22,11 @@ import { UpdateMenuComponent } from './update-menu/update-menu.component';
     PlatsComponent,
     FeedbackComponent,
     AddMenuComponent,
-    UpdateMenuComponent
+    UpdateMenuComponent,
+    TypeComponent,
+    AddTypePlatComponent,
+    UpdateTypePlatComponent,
+    AddPlatComponent
   ],
   imports: [
     BrowserModule,
@@ -26,6 +34,7 @@ import { UpdateMenuComponent } from './update-menu/update-menu.component';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

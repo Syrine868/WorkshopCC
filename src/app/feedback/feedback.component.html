@@ -4,8 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://angular-btvqwe.stackblitz.io"> 
 </head>
 <body>
-   
+   <app-plats ></app-plats>
+   <ngb-rating [(rate)]="selected" (hover)="hovered=$event" (leave)="hovered=0" [readonly]="readonly"></ngb-rating>
+<hr>
+<pre>
+Selected: <b>{{selected}}</b>
+Hovered: <b>{{hovered}}</b>
+</pre>
+<button class="btn btn-sm btn-outline-{{readonly ? 'danger' : 'success'}}" (click)="readonly = !readonly">
+  {{ readonly ? "readonly" : "editable"}}
+</button>
 </body>
 </html>

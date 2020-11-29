@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./feedback.component.css']
 })
 export class FeedbackComponent implements OnInit {
-
+  selected = 0;
+  hovered = 0;
+  readonly = false;
   constructor() { }
 
   ngOnInit(): void {

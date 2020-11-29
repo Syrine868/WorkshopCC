@@ -1,11 +1,35 @@
 {
+  "typeplat": [
+    {
+      "id": "1",
+      "nom": "Salade",
+      "description": "Délicieuse , Régime "
+    },
+    {
+      "id": "2",
+      "nom": "Plat",
+      "description": "Délicieux "
+    }
+  ],
   "plats": [],
   "menu": [
     {
-      "id": 3,
-      "nom_menu": "Apple",
-      "plats_nom": "couscous",
-      "chef": "test"
+      "nom_menu": "Soirée privé",
+      "plats_nom": "Hamburger",
+      "chef": "Syrine",
+      "id": 4
+    },
+    {
+      "nom_menu": "Soirée privé",
+      "plats_nom": "Hamburger",
+      "chef": "Syrine",
+      "id": 5
+    },
+    {
+      "nom_menu": "Fête anniversaire",
+      "plats_nom": "Tagliatelle ",
+      "chef": "Syrine",
+      "id": 6
     }
   ]
 }

@@ -1,0 +1,37 @@
+<form style="width: 400px;" class="form-group" [formGroup]="typePlatGroup">
+    <fieldset>
+        <legend>Ajouter un type de plat</legend>
+        Identifiant:
+        <input class="form-control" formControlName="id" [(ngModel)]="typeplat.id" name="id" type="text">
+        <div *ngIf="id.invalid">
+            <div *ngIf="id.touched" >
+                <p class=" alert alert-danger" role="alert">Champ Obligatoire</p>
+            </div>
+        </div>
+    <br>
+    Nom:
+    <input class="form-control" formControlName="nom" name="nom" [(ngModel)]="typeplat.nom"  type="text">
+    <div *ngIf="nom.invalid">   
+        <div *ngIf="nom.touched">
+            <p class="alert alert-warning" role="alert">Champ Obligatoire</p>   
+        </div>
+              
+       <div *ngIf="nom.errors?.minlength">
+           <p class="alert alert-danger" role="alert">MinLength 3 chars</p>
+      </div>
+  
+    </div>
+    <br>
+
+    Description :
+    <input class="form-control" formControlName="description" name="description" [(ngModel)]="typeplat.description" type="text">
+    <div *ngIf="description.errors?.minlength ">
+        <p class=" alert alert-warning" role="alert" >Au moins 10 caractéres</p>
+    </div>
+    <div *ngIf="description.errors?.maxlength ">
+        <p class=" alert alert-warning" role="alert" >Au plus 10 caractéres</p>
+    </div>
+    <br>
+    <button class="btn btn-outline-info" (click)="update()" [disabled]="typePlatGroup.invalid">Sauvegarder</button>
+</fieldset>
+</form>
