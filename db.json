@@ -7,11 +7,28 @@
     },
     {
       "id": "2",
-      "nom": "Plat",
-      "description": "Délicieux "
+      "nom": "Maklob",
+      "description": "Chawarmaaa"
+    },
+    {
+      "id": "3",
+      "nom": "aaa",
+      "description": "description type "
     }
   ],
-  "plats": [],
+  "plats": [
+    {
+      "id": "1",
+      "nom": "couscous",
+      "prix": "200"
+    },
+    {
+      "id": "2",
+      "nom": "hamburger",
+      "prix": "20",
+      "type_plat": "2"
+    }
+  ],
   "menu": [
     {
       "nom_menu": "Soirée privé",

@@ -21,7 +21,7 @@ export class AddPlatComponent implements OnInit {
   PlatForm: FormBuilder = new FormBuilder();
 
   constructor(private router: Router, private ps: PlatService, private ts: TypeService) { 
-    this.PlatGroup = this.PlatForm.group({
+    this.PlatGroup = new FormGroup({
       id: new FormControl('', Validators.required),
       nom:  new FormControl('', [Validators.required, Validators.minLength(3)]),
       prix: new FormControl('', Validators.pattern("[1-9][0-9]*")),
@@ -40,7 +40,7 @@ export class AddPlatComponent implements OnInit {
   get id() { return this.PlatGroup.get('id'); }
   get nom() { return this.PlatGroup.get('nom'); }
   get prix() { return this.PlatGroup.get('prix'); }
-  get type_plat() { return this.PlatGroup.get('typeplat').get('nom'); }
+  get type_plat() { return this.PlatGroup.get('type_plat'); }
   
 
   save() {

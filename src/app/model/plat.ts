@@ -6,5 +6,5 @@ export class Plat{
   id: number;
   nom: string;
   prix: number;
-  typeplat: TypePlat;
+  type_plat: TypePlat;
 }

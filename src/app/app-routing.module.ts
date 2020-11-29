@@ -23,7 +23,7 @@ const routes: Routes = [
   { path: 'updatemenu/:id', component: UpdateMenuComponent },
   { path: 'type', component: TypeComponent },
   { path: 'add-type-plat', component: AddTypePlatComponent},
-  { path: 'deletetypeplat/:id', component:TypeComponent},
+  { path: 'deletetypesplats/:id', component:TypeComponent},
   { path: 'updatetypeplat/:id', component: UpdateTypePlatComponent },
   { path: 'add-plat', component: AddPlatComponent}
 

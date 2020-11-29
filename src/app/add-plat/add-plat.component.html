@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <form style="width: 400px;" class="form-group" [formGroup]="PlatGroup">
         <fieldset>
@@ -12,36 +14,43 @@
             Identifiant:
             <input class="form-control" formControlName="id" [(ngModel)]="plat.id" name="id" type="text">
             <div *ngIf="id.invalid">
-                <div *ngIf="id.touched" >
+                <div *ngIf="id.touched">
                     <p class=" alert alert-danger" role="alert">Champ Obligatoire</p>
                 </div>
             </div>
             <br>
             Nom:
-        <input class="form-control" formControlName="nom" name="nom" [(ngModel)]="plat.nom"  type="text">
-        <div *ngIf="nom.invalid">   
-            <div *ngIf="nom.touched">
-                <p class="alert alert-warning" role="alert">Champ Obligatoire</p>   
+            <input class="form-control" formControlName="nom" name="nom" [(ngModel)]="plat.nom" type="text">
+            <div *ngIf="nom.invalid">
+                <div *ngIf="nom.touched">
+                    <p class="alert alert-warning" role="alert">Champ Obligatoire</p>
+                </div>
+
+                <div *ngIf="nom.errors?.minlength">
+                    <p class="alert alert-danger" role="alert">MinLength 3 chars</p>
+                </div>
+
             </div>
-                  
-            <div *ngIf="nom.errors?.minlength">
-               <p class="alert alert-danger" role="alert">MinLength 3 chars</p>
-           </div>
-      
-        </div>
-        <br>
-    
-        <select id="typeplat" name="typeplat" [(ngModel)]="typeplat"  class="form-control">
-            <option *ngFor="let item of typeplats" [value]="item.id" >
-                {{item.nom}}
-            </option>
-        </select>
-        
+            <br>
+            Prix:
+            <input class="form-control" formControlName="prix" [(ngModel)]="plat.prix" name="prix" type="text">
+            <div *ngIf="prix.invalid">
+                <div *ngIf="prix.touched">
+                    <p class=" alert alert-danger" role="alert">Champ Obligatoire</p>
+                </div>
+            </div>
+            <br>
 
+            <select id="typeplat" name="typeplat" [(ngModel)]="plat.type_plat" formControlName="type_plat" class="form-control">
+                <option *ngFor="let item of typeplats" [value]="item.id">
+                    {{item.nom}}
+                </option>
+            </select>
 
-            <button class="btn btn-outline-info" (click)="save()" [disabled]="PlatGroup.invalid">Sauvegarder</button>
-    </fieldset>
+            <button class="btn btn-outline-info" (click)="save()" >Sauvegarder</button>
+        </fieldset>
     </form>
-    
+
 </body>
+
 </html>

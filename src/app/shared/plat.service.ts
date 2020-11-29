@@ -23,13 +23,7 @@ export class PlatService {
   }
 
 
-  getPLatByMenu(): Observable<Plat[]> {
-    return this.getMenu().pipe(
-      mergeMap((menubyplat) => {
-        return this.http.get<Plat[]>(this.platUrl+'/?menu=' + menubyplat['menu'])
-      })
-    )
-  }
+ 
 
 
   addPlat(plat: Plat): Observable<Plat> {
@@ -46,8 +40,6 @@ export class PlatService {
   deletemenu(plat: Plat | number): Observable<Plat>{
     const id = typeof plat === 'number' ? plat : plat.id;
     const url = this.platUrl + '/' + id;
-    console.log(url);
-
     return this.http.delete<Plat>(url);
   }
 }

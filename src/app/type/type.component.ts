@@ -22,12 +22,12 @@ export class TypeComponent implements OnInit {
     );
   }
 
-  delete(id: number)
+  delete(id)
   {
-    this.ts.deleteTypePlat(id).subscribe(
+    this.ts.deletety(id).subscribe(
       resultat => {
-        alert("type deleted");
-        console.log("deleted");
+        alert("type plat deleted");
+        console.log("Supprimé !");
         this.router.navigateByUrl('/type');
       }, (err) => {
         console.log(err);
