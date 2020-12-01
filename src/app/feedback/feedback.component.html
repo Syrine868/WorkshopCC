@@ -10,7 +10,7 @@
 
 <body>
 
-  <button class="btn btn-info" >Calculer</button>
+  <button class="btn btn-info">Calculer</button>
 
 
   <form style="width: 400px;" class="form-group" [formGroup]="feedbackgroup">
@@ -18,7 +18,7 @@
       <legend>Ajouter un feedback</legend>
       Identifiant:
       <input class="form-control" formControlName="id" [(ngModel)]="feedback.id" name="id" type="text">
-    
+
       <br>
       Message:
       <input class="form-control" formControlName="body" name="body" [(ngModel)]="feedback.body" type="text">
@@ -38,7 +38,7 @@
       <button class="btn btn-outline-info" (click)="save()">Sauvegarder</button>
     </fieldset>
   </form>
-
+ 
 </body>
 
 </html>

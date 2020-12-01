@@ -9,13 +9,15 @@ import { TypeService } from '../shared/type.service';
   styleUrls: ['./type.component.css']
 })
 export class TypeComponent implements OnInit {
-  typeplat: TypePlat[] = [];
+  typeplats: TypePlat[] = [];
   tp: TypePlat = new TypePlat();
+  currentItem = 'Television';
+
   constructor(private ts: TypeService, private router: Router) { }
 
   ngOnInit(): void {
     this.ts.getAllTypePlat().subscribe((data: TypePlat[]) => {
-      this.typeplat = data
+      this.typeplats = data
     }, (err) => {
       console.log(err);
     }
@@ -24,13 +26,11 @@ export class TypeComponent implements OnInit {
 
   delete(id)
   {
-    this.ts.deletety(id).subscribe(
-      resultat => {
+    this.ts.deleteTypse(id).subscribe(
+      res => {
+        
         alert("type plat deleted");
-        console.log("Supprimé !");
         this.router.navigateByUrl('/type');
-      }, (err) => {
-        console.log(err);
       }
     );
   }

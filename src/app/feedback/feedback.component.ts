@@ -20,11 +20,11 @@ export class FeedbackComponent implements OnInit {
   listfeedbacks: any = [];
   feedbackgroup: FormGroup;
   feedback: FeedBack = new FeedBack();
-
+  stars: number[] = [1, 2, 3, 4, 5];
+  selectedValue: number;
   constructor(private fs: FeedbackService, private router: Router,private ps:PlatService) {
 
     this.feedbackgroup = new FormGroup({
-      id: new FormControl('', Validators.required),
       body:  new FormControl('', [Validators.required, Validators.minLength(3)]),
       note: new FormControl('', Validators.minLength(4)),
       plat_id: new FormControl('',Validators.required)
@@ -41,8 +41,12 @@ export class FeedbackComponent implements OnInit {
     );
   }
 
+  countStar(star) {
+    this.selectedValue = this.feedback.note;
+    this.selectedValue = star;
+    console.log('Value of star', star);
+  }
 
-  get id() { return this.feedbackgroup.get('id'); }
   get nom() { return this.feedbackgroup.get('body'); }
   get prix() { return this.feedbackgroup.get('note'); }
   get plat_id() { return this.feedbackgroup.get('plat_id'); }

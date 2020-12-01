@@ -37,7 +37,7 @@ export class PlatService {
   }
 
   
-  deletemenu(plat: Plat | number): Observable<Plat>{
+  deleteplats(plat: Plat | number): Observable<Plat>{
     const id = typeof plat === 'number' ? plat : plat.id;
     const url = this.platUrl + '/' + id;
     return this.http.delete<Plat>(url);

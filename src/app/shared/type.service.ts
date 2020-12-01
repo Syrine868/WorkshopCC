@@ -27,11 +27,14 @@ export class TypeService {
   updateMenu(id: number, typeplat: TypePlat): Observable<TypePlat>{
     return this.http.put<TypePlat>(this.typeurl+ '/' + id , typeplat , this.httpOptions);
   }
-  deletety(t: TypePlat | number): Observable<TypePlat>{
-    const id = typeof t === 'number' ? t : t.id;
-    const url = this.typeurl + '/' + id;
-    console.log(url);
 
+  deleteTypse(menu: TypePlat | number): Observable<TypePlat>{
+    const id = typeof menu === 'number' ? menu : menu.id;
+    const url = this.typeurl + '/' + id;
+    console.log(id);
     return this.http.delete<TypePlat>(url);
   }
+
+ 
+
 }

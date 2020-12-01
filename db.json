@@ -1,19 +1,14 @@
 {
   "typeplat": [
     {
-      "id": "1",
-      "nom": "Salade",
-      "description": "Délicieuse , Régime "
+      "nom": "the king",
+      "description": "the best type ever",
+      "id": 1
     },
     {
-      "id": "2",
-      "nom": "Maklob",
-      "description": "Chawarmaaa"
-    },
-    {
-      "id": "3",
-      "nom": "aaa",
-      "description": "description type "
+      "nom": "Pasta",
+      "description": "the best type ever",
+      "id": 2
     }
   ],
   "plats": [
@@ -39,6 +34,12 @@
       "nom": "the king",
       "prix": "2500",
       "type_plat": "3"
+    },
+    {
+      "id": "5",
+      "nom": "Madfouna",
+      "prix": "50000",
+      "type_plat": "3"
     }
   ],
   "menu": [
@@ -47,12 +48,6 @@
       "plats_nom": "Hamburger",
       "chef": "Syrine",
       "id": 5
-    },
-    {
-      "nom_menu": "Fête anniversaire",
-      "plats_nom": "Tagliatelle ",
-      "chef": "Syrine",
-      "id": 6
     }
   ],
   "Feedback": [
@@ -67,6 +62,11 @@
       "body": "j'ai aimé",
       "note": "2",
       "plat_id": "3"
+    },
+    {
+      "body": "j'ai aimé",
+      "plat_id": "1",
+      "id": "ZLvtW1n"
     }
   ]
 }

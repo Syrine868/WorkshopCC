@@ -1,2 +1,8 @@
 <a routerLink="['/add-plat']">ADD</a>
 <app-add-plat (addp)="add_plat($event)"></app-add-plat>
+<ul>
+    <li *ngFor="let item of plats">
+        {{item.nom}}
+
+    </li>
+</ul>

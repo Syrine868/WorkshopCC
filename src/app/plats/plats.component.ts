@@ -11,16 +11,23 @@ import { TypeService } from '../shared/type.service';
   styleUrls: ['./plats.component.css']
 })
 export class PlatsComponent implements OnInit {
-
+  color: string;
   plats: any = [];
-  @Input() plat: Plat;
+  @Input() item: string;
   @Output() addp = new EventEmitter<Plat>();
-  constructor() { 
+  constructor(private ps: PlatService) { 
 
   }
 
 
   ngOnInit(): void {
+
+    this.ps.getPlats().subscribe((data: Plat[]) => {
+      this.plats = data
+    }, (err) => {
+      console.log(err);
+    }
+    );
   }
 
   add_plat(p:Plat) {

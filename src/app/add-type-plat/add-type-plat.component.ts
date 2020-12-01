@@ -17,7 +17,6 @@ export class AddTypePlatComponent implements OnInit {
   constructor(private ts: TypeService, private router: Router)
   { 
     this.typePlatGroup = this.typePlatForm.group({
-      id: new FormControl('', Validators.required),
       nom:  new FormControl('', [Validators.required, Validators.minLength(3)]),
       description:  new FormControl('',Validators.minLength(4) )
     });
@@ -26,7 +25,6 @@ export class AddTypePlatComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  get id() { return this.typePlatGroup.get('id'); }
   get nom() { return this.typePlatGroup.get('nom'); }
   get description() { return this.typePlatGroup.get('description'); }
 

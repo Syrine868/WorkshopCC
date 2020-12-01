@@ -1,13 +1,7 @@
 <form style="width: 400px;" class="form-group" [formGroup]="typePlatGroup">
     <fieldset>
         <legend>Ajouter un type de plat</legend>
-        Identifiant:
-        <input class="form-control" formControlName="id" [(ngModel)]="typeplat.id" name="id" type="text">
-        <div *ngIf="id.invalid">
-            <div *ngIf="id.touched" >
-                <p class=" alert alert-danger" role="alert">Champ Obligatoire</p>
-            </div>
-        </div>
+       
     <br>
     Nom:
     <input class="form-control" formControlName="nom" name="nom" [(ngModel)]="typeplat.nom"  type="text">

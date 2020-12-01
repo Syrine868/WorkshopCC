@@ -15,6 +15,7 @@ import { TypeComponent } from './type/type.component';
 import { AddTypePlatComponent } from './add-type-plat/add-type-plat.component';
 import { UpdateTypePlatComponent } from './update-type-plat/update-type-plat.component';
 import { AddPlatComponent } from './add-plat/add-plat.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,7 @@ import { AddPlatComponent } from './add-plat/add-plat.component';
     TypeComponent,
     AddTypePlatComponent,
     UpdateTypePlatComponent,
-    AddPlatComponent
+    AddPlatComponent,
   ],
   imports: [
     BrowserModule,
