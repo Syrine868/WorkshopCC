@@ -16,11 +16,13 @@ export class FeedbackService {
   };
   constructor(private http: HttpClient) { }
 
-
   ajoutercommentairePlatF(f: FeedBack): Observable<FeedBack> {
     return this.http.post<FeedBack>(this.fUrl, f, this.httpOptions);
   }
   getFeedbackss(): Observable<FeedBack[]> {
     return this.http.get<FeedBack[]>(this.fUrl);
+  }
+  updateFeedbacks(id: number, plat: FeedBack): Observable<FeedBack>{
+    return this.http.put<FeedBack>(this.fUrl+ '/' + id , plat , this.httpOptions);
   }
 }

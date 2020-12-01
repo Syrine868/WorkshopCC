@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ajouter Plat</title>
+    <link rel="stylesheet" href="add-plat.component.css">
 </head>
 
 <body>
-    <form style="width: 400px;" class="form-group" [formGroup]="PlatGroup">
+    <form style="width: 400px;" class="form form-group" [formGroup]="PlatGroup">
         <fieldset>
             <legend>Ajouter un plat</legend>
-           
+
             <br>
             Nom:
             <input class="form-control" formControlName="nom" name="nom" [(ngModel)]="plat.nom" type="text">
@@ -35,13 +36,14 @@
             </div>
             <br>
 
-            <select id="typeplat" name="typeplat" [(ngModel)]="plat.type_plat" formControlName="type_plat" class="form-control">
+            <select id="typeplat" name="typeplat" [(ngModel)]="plat.type_plat" formControlName="type_plat"
+                class="form-control">
                 <option *ngFor="let item of typeplats" [value]="item.id">
                     {{item.nom}}
                 </option>
             </select>
-
-            <button class="btn btn-outline-info" (click)="save()" >Sauvegarder</button>
+            <br>
+            <button class="btn btn-outline-info" (click)="save()">Sauvegarder</button>
         </fieldset>
     </form>
 

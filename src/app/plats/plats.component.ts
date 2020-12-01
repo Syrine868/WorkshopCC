@@ -15,6 +15,8 @@ export class PlatsComponent implements OnInit {
   plats: any = [];
   @Input() item: string;
   @Output() addp = new EventEmitter<Plat>();
+
+  
   constructor(private ps: PlatService) { 
 
   }

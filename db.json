@@ -40,6 +40,12 @@
       "nom": "Madfouna",
       "prix": "50000",
       "type_plat": "3"
+    },
+    {
+      "nom": "Raviolli",
+      "prix": "25000",
+      "type_plat": "2",
+      "id": "sqmAexD"
     }
   ],
   "menu": [
@@ -48,25 +54,62 @@
       "plats_nom": "Hamburger",
       "chef": "Syrine",
       "id": 5
+    },
+    {
+      "nom_menu": "Soirée",
+      "plats_nom": "Putanesca",
+      "chef": "Syrine",
+      "id": 6
     }
   ],
   "Feedback": [
     {
-      "id": "1",
-      "body": "j'ai aimé",
-      "note": "2",
-      "plat_id": "undefined"
+      "body": "Plat n'est pas à la hauteur",
+      "note": 0,
+      "plat_id": "couscous",
+      "id": 1
     },
     {
-      "id": "2",
-      "body": "j'ai aimé",
-      "note": "2",
-      "plat_id": "3"
+      "body": "mmmm bien",
+      "note": 3,
+      "plat_id": "hamburger",
+      "id": 2
     },
     {
-      "body": "j'ai aimé",
-      "plat_id": "1",
-      "id": "ZLvtW1n"
+      "body": "mmmm délicieux",
+      "note": 2,
+      "plat_id": "makloub",
+      "id": 3
+    },
+    {
+      "body": "pas mauvais",
+      "note": 2,
+      "plat_id": "hamburger",
+      "id": 4
+    },
+    {
+      "body": "wwwwwwwwwwwwwow",
+      "note": 5,
+      "plat_id": "Madfouna",
+      "id": 5
+    },
+    {
+      "body": "j'ai trop aimé",
+      "note": 5,
+      "plat_id": "Raviolli",
+      "id": 6
+    },
+    {
+      "body": "pas mauvais",
+      "note": 2,
+      "plat_id": "the king",
+      "id": 7
+    },
+    {
+      "body": "mmmm délicieux",
+      "note": 4,
+      "plat_id": "couscous",
+      "id": 8
     }
   ]
 }
