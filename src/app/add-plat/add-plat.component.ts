@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Plat } from '../model/plat';
@@ -16,7 +16,8 @@ export class AddPlatComponent implements OnInit {
   typeplat: TypePlat = new TypePlat();
   plats: Plat[] = [];
   plat: Plat = new Plat();
-  
+  @Input() p: Plat;
+  @Output() addp = new EventEmitter<Plat>();
   PlatGroup: FormGroup;
   PlatForm: FormBuilder = new FormBuilder();
 

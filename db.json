@@ -27,15 +27,21 @@
       "nom": "hamburger",
       "prix": "20",
       "type_plat": "2"
+    },
+    {
+      "id": "3",
+      "nom": "makloub",
+      "prix": "2500",
+      "type_plat": "2"
+    },
+    {
+      "id": "4",
+      "nom": "the king",
+      "prix": "2500",
+      "type_plat": "3"
     }
   ],
   "menu": [
-    {
-      "nom_menu": "Soirée privé",
-      "plats_nom": "Hamburger",
-      "chef": "Syrine",
-      "id": 4
-    },
     {
       "nom_menu": "Soirée privé",
       "plats_nom": "Hamburger",
@@ -47,6 +53,20 @@
       "plats_nom": "Tagliatelle ",
       "chef": "Syrine",
       "id": 6
+    }
+  ],
+  "Feedback": [
+    {
+      "id": "1",
+      "body": "j'ai aimé",
+      "note": "2",
+      "plat_id": "undefined"
+    },
+    {
+      "id": "2",
+      "body": "j'ai aimé",
+      "note": "2",
+      "plat_id": "3"
     }
   ]
 }

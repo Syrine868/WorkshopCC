@@ -1,21 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://angular-btvqwe.stackblitz.io"> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://angular-btvqwe.stackblitz.io">
 </head>
+
 <body>
-   <app-plats ></app-plats>
-   <ngb-rating [(rate)]="selected" (hover)="hovered=$event" (leave)="hovered=0" [readonly]="readonly"></ngb-rating>
-<hr>
-<pre>
-Selected: <b>{{selected}}</b>
-Hovered: <b>{{hovered}}</b>
-</pre>
-<button class="btn btn-sm btn-outline-{{readonly ? 'danger' : 'success'}}" (click)="readonly = !readonly">
-  {{ readonly ? "readonly" : "editable"}}
-</button>
+
+  <button class="btn btn-info" >Calculer</button>
+
+
+  <form style="width: 400px;" class="form-group" [formGroup]="feedbackgroup">
+    <fieldset>
+      <legend>Ajouter un feedback</legend>
+      Identifiant:
+      <input class="form-control" formControlName="id" [(ngModel)]="feedback.id" name="id" type="text">
+    
+      <br>
+      Message:
+      <input class="form-control" formControlName="body" name="body" [(ngModel)]="feedback.body" type="text">
+
+      <br>
+      Note:
+      <input class="form-control" formControlName="note" [(ngModel)]="feedback.note" name="note" type="text">
+
+      <br>
+      Plat:
+      <select id="plat_id" name="plat_id" [(ngModel)]="feedback.plat_id" formControlName="plat_id" class="form-control">
+        <option value="" disabled>Sélectionnez votre Plat</option>
+        <option *ngFor="let item of plats" [value]="item.id">
+          {{item.nom}}
+        </option>
+      </select>
+      <button class="btn btn-outline-info" (click)="save()">Sauvegarder</button>
+    </fieldset>
+  </form>
+
 </body>
+
 </html>

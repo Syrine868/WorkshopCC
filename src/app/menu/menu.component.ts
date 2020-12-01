@@ -1,7 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { FeedBack } from '../model/FeedBack';
 import { Menu } from '../model/Menu';
+import { Plat } from '../model/plat';
+import { TypePlat } from '../model/typeplat';
+import { FeedbackService } from '../shared/feedback.service';
 import { MenuService } from '../shared/menu.service';
+import { PlatService } from '../shared/plat.service';
+import { TypeService } from '../shared/type.service';
 
 @Component({
   selector: 'app-menu',
@@ -12,7 +19,13 @@ export class MenuComponent implements OnInit {
 
   menus: Menu[] = [];
   m: Menu = new Menu();
-  constructor(private menuS: MenuService, private router: Router) { }
+  favores: any = [];
+  feedback: FeedBack = new FeedBack();
+  feedbackgroup: FormGroup;
+  typePlatForm: FormBuilder = new FormBuilder();
+  constructor(private menuS: MenuService, private router: Router) {
+
+   }
 
   ngOnInit(): void {
     this.menuS.getAllMenus().subscribe((data: Menu[]) => {
@@ -21,9 +34,10 @@ export class MenuComponent implements OnInit {
       console.log(err);
     }
     );
-
+ 
 
   }
+
 
   delete(id)
   {
@@ -37,5 +51,9 @@ export class MenuComponent implements OnInit {
       }
     );
   }
+  favore(f: FeedBack) {
+    f.note += 1;
+  }
+
 
 }

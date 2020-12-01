@@ -29,7 +29,7 @@ export class PlatService {
   addPlat(plat: Plat): Observable<Plat> {
     return this.http.post<Plat>(this.platUrl, plat, this.httpOptions);
   }
-  getPlats(plat: Plat): Observable<Plat[]> {
+  getPlats(): Observable<Plat[]> {
     return this.http.get<Plat[]>(this.platUrl);
   }
   updatePlat(id: number, plat: Plat): Observable<Plat>{

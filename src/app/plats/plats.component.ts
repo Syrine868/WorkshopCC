@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Plat } from '../model/plat';
 import { PlatService } from '../shared/plat.service';
 import { TypeService } from '../shared/type.service';
 
@@ -11,7 +12,9 @@ import { TypeService } from '../shared/type.service';
 })
 export class PlatsComponent implements OnInit {
 
-  
+  plats: any = [];
+  @Input() plat: Plat;
+  @Output() addp = new EventEmitter<Plat>();
   constructor() { 
 
   }
@@ -20,6 +23,10 @@ export class PlatsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  add_plat(p:Plat) {
+    this.addp.emit(p);
+     
+  }
 
   
 
