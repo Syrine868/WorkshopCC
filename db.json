@@ -46,6 +46,12 @@
       "prix": "25000",
       "type_plat": "2",
       "id": "sqmAexD"
+    },
+    {
+      "nom": "Lasagne",
+      "prix": "2500",
+      "type_plat": "Pasta",
+      "id": "1Vn5_OP"
     }
   ],
   "menu": [
@@ -110,6 +116,24 @@
       "note": 4,
       "plat_id": "couscous",
       "id": 8
+    },
+    {
+      "body": "j'ai aimé",
+      "note": 3,
+      "plat_id": "couscous",
+      "id": 9
+    },
+    {
+      "body": "wwwwwwwwwwwwwow",
+      "note": 5,
+      "plat_id": "Raviolli",
+      "id": 10
+    },
+    {
+      "body": "nonnnnnnnnnnnn",
+      "note": null,
+      "plat_id": "couscous",
+      "id": 11
     }
   ]
 }

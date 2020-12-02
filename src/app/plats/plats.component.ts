@@ -21,7 +21,10 @@ export class PlatsComponent implements OnInit {
 
   }
 
-
+  selectedPlat: Plat;
+  onSelect(plat: Plat): void {
+    this.selectedPlat = plat;
+  }
   ngOnInit(): void {
 
     this.ps.getPlats().subscribe((data: Plat[]) => {

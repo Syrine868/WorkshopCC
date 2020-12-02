@@ -5,7 +5,7 @@ import { Plat } from './plat';
 export class Menu {
   id: number;
   nom_menu: string;
-  plats_nom: string;
+  plats_nom: Plat;
   chef: string;
  
 

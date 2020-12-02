@@ -9,11 +9,11 @@
 </head>
 
 <body>
-    <form style="width: 400px;" class="form form-group" [formGroup]="PlatGroup">
+    <form style="width: 400px;" class="form-group mx-4 my-3" [formGroup]="PlatGroup">
         <fieldset>
             <legend>Ajouter un plat</legend>
 
-            <br>
+            
             Nom:
             <input class="form-control" formControlName="nom" name="nom" [(ngModel)]="plat.nom" type="text">
             <div *ngIf="nom.invalid">
@@ -35,10 +35,11 @@
                 </div>
             </div>
             <br>
-
+           Type Plat:
             <select id="typeplat" name="typeplat" [(ngModel)]="plat.type_plat" formControlName="type_plat"
-                class="form-control">
-                <option *ngFor="let item of typeplats" [value]="item.id">
+                class="custom-select">
+                <option disabled selected>Open this select menu</option>
+                <option *ngFor="let item of typeplats" [value]="item.nom">
                     {{item.nom}}
                 </option>
             </select>

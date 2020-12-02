@@ -25,4 +25,5 @@ export class FeedbackService {
   updateFeedbacks(id: number, plat: FeedBack): Observable<FeedBack>{
     return this.http.put<FeedBack>(this.fUrl+ '/' + id , plat , this.httpOptions);
   }
+  
 }

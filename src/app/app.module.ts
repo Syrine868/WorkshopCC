@@ -17,6 +17,8 @@ import { UpdateTypePlatComponent } from './update-type-plat/update-type-plat.com
 import { AddPlatComponent } from './add-plat/add-plat.component';
 import { UpdateFeedbackComponent } from './update-feedback/update-feedback.component';
 import { ListFeedbackComponent } from './list-feedback/list-feedback.component';
+import { DetailsPlatsComponent } from './details-plats/details-plats.component';
+import { RestoComponent } from './resto/resto.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { ListFeedbackComponent } from './list-feedback/list-feedback.component';
     AddPlatComponent,
     UpdateFeedbackComponent,
     ListFeedbackComponent,
+    DetailsPlatsComponent,
+    RestoComponent,
   ],
   imports: [
     BrowserModule,

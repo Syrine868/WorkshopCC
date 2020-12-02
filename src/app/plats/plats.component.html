@@ -1,10 +1,49 @@
-<div  class="col md-2">
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+</head>
+<body>
+<div  class="row col">
+    <div class="column">
 <app-add-plat (addp)="add_plat($event)"></app-add-plat>
-<ul>
-    <li *ngFor="let item of plats">
-        {{item.nom}}
+</div>
+<div class="column my-3">
+<legend>Liste Plats</legend>
+<ul class="list-group">
+    <li class="btn btn-outline-info" *ngFor="let plat of plats" [class.selected]="plat === selectedPlat"
+        (click)="onSelect(plat)">
+       <span class="badge"> {{plat.nom}}</span>
 
     </li>
-</ul>
-</div>
+    
+    <app-details-plats [plat]="selectedPlat"></app-details-plats>
 
+</ul>
+</div></div>
+<br><br>
+
+
+
+</body>
+</html>

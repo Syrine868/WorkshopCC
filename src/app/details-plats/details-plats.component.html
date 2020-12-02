@@ -1,0 +1,15 @@
+<div *ngIf="plat">
+    <div class="list-group my-5 w-50 " >
+    
+  
+        <a  class="list-group-item list-group-item-action flex-column align-items-start active">
+          <div class=" w-100 justify-content-between">
+            <h2>Détails :</h2>
+            
+            <h5 class="mb-1">Type Plat :  {{plat.type_plat}}</h5>
+            <small>{{plat.id}}</small>
+          </div>
+          <p class="mb-1">{{plat.nom | uppercase}} </p>
+        </a>
+        </div>
+  </div>

@@ -9,17 +9,16 @@ import { ListFeedbackComponent } from './list-feedback/list-feedback.component';
 import { MenuComponent } from './menu/menu.component';
 import { Plat } from './model/plat';
 import { PlatsComponent } from './plats/plats.component';
+import { RestoComponent } from './resto/resto.component';
 import { TypeComponent } from './type/type.component';
 import { UpdateMenuComponent } from './update-menu/update-menu.component';
 import { UpdateTypePlatComponent } from './update-type-plat/update-type-plat.component';
 
 
 const routes: Routes = [
-  { path: '', component:MenuComponent},
-  { path: 'menu', component: MenuComponent },
+  { path: '', component:RestoComponent},
   { path: 'plats', component: PlatsComponent },
   { path: 'feedbacks', component: FeedbackComponent },
-  { path: 'add-menu', component: AddMenuComponent },
   { path: 'deletemenu/:id', component: MenuComponent },
   { path: 'updatemenu/:id', component: UpdateMenuComponent },
   { path: 'type', component: TypeComponent },
