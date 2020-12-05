@@ -52,6 +52,12 @@
       "prix": "2500",
       "type_plat": "Pasta",
       "id": "1Vn5_OP"
+    },
+    {
+      "nom": "Putanesca",
+      "prix": "25000",
+      "type_plat": "Pasta",
+      "id": "-5sjPs3"
     }
   ],
   "menu": [
@@ -124,16 +130,22 @@
       "id": 9
     },
     {
-      "body": "wwwwwwwwwwwwwow",
-      "note": 5,
-      "plat_id": "Raviolli",
-      "id": 10
-    },
-    {
       "body": "nonnnnnnnnnnnn",
       "note": null,
       "plat_id": "couscous",
       "id": 11
+    },
+    {
+      "body": "WOOW DELICIEUXXXXXXXX",
+      "note": 5,
+      "plat_id": "Lasagne",
+      "id": 12
+    },
+    {
+      "body": "J'ai aimée ce plat ",
+      "note": 4,
+      "plat_id": "Putanesca",
+      "id": 13
     }
   ]
 }

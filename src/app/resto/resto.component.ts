@@ -7,6 +7,7 @@ import { TypePlat } from '../model/typeplat';
 import { FeedbackService } from '../shared/feedback.service';
 import { MenuService } from '../shared/menu.service';
 import { PlatService } from '../shared/plat.service';
+import { RestoService } from '../shared/resto.service';
 import { TypeService } from '../shared/type.service';
 
 @Component({
@@ -18,10 +19,9 @@ export class RestoComponent implements OnInit {
 
   listTypePlats: TypePlat[] = [];
   listPlats: Plat[] = [];
-
   listFeedbacks: FeedBack[] = [];
-
-  constructor(private router:Router, private ts:TypeService,private ps:PlatService, private fs:FeedbackService) { }
+  term: string;
+  constructor(private router:Router, private ts:TypeService,private ps:PlatService, private fs:FeedbackService, private rs:RestoService) { }
 
   ngOnInit(): void {
     this.ts.getAllTypePlat().subscribe((data: TypePlat[]) => {
@@ -30,6 +30,8 @@ export class RestoComponent implements OnInit {
       console.log(err);
     }
     );
+
+   
 
     this.getPs();
     this.getfs();
@@ -45,6 +47,15 @@ export class RestoComponent implements OnInit {
   }
 
 
+  getByid(id) {
+    this.rs.getPlatByid(id).subscribe((data: Plat[]) => {
+      this.listPlats = data
+    }, (err) => {
+      console.log(err);
+    }
+    );
+  }
+
   getPs() {
     this.ps.getPlats().subscribe((data: Plat[]) => {
       this.listPlats = data
@@ -54,12 +65,5 @@ export class RestoComponent implements OnInit {
     );
   }
 
-  getTs() {
-    this.ts.getAllTypePlat().subscribe((data: TypePlat[]) => {
-      this.listTypePlats = data
-    }, (err) => {
-      console.log(err);
-    }
-    );
-  }
+ 
 }

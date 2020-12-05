@@ -4,6 +4,7 @@ import { AddMenuComponent } from './add-menu/add-menu.component';
 import { AddPlatComponent } from './add-plat/add-plat.component';
 import { AddTypePlatComponent } from './add-type-plat/add-type-plat.component';
 import { AppComponent } from './app.component';
+import { DetailsPlatsComponent } from './details-plats/details-plats.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { ListFeedbackComponent } from './list-feedback/list-feedback.component';
 import { MenuComponent } from './menu/menu.component';
@@ -26,8 +27,9 @@ const routes: Routes = [
   { path: 'deleteyps/:id', component:TypeComponent},
   { path: 'updatetypeplat/:id', component: UpdateTypePlatComponent },
   { path: 'add-plat', component: AddPlatComponent },
-  { path: 'listefeedbacks', component: ListFeedbackComponent}
-
+  { path: 'listefeedbacks', component: ListFeedbackComponent },
+  { path: 'detailsplat/:id', component: DetailsPlatsComponent },
+  {path: 'deletef/:id', component:ListFeedbackComponent}
 ];
 
 @NgModule({

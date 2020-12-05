@@ -22,8 +22,15 @@ export class FeedbackService {
   getFeedbackss(): Observable<FeedBack[]> {
     return this.http.get<FeedBack[]>(this.fUrl);
   }
-  updateFeedbacks(id: number, plat: FeedBack): Observable<FeedBack>{
-    return this.http.put<FeedBack>(this.fUrl+ '/' + id , plat , this.httpOptions);
+  updateFeedbacks(id: number, feedback: FeedBack): Observable<FeedBack>{
+    return this.http.put<FeedBack>(this.fUrl+ '/' + id , feedback , this.httpOptions);
+  }
+  feedbackdelete(feedback: FeedBack | number): Observable<FeedBack>{
+    const id = typeof feedback === 'number' ? feedback : feedback.id;
+    const url = this.fUrl + '/' + id;
+    console.log(url);
+
+    return this.http.delete<FeedBack>(url);
   }
   
 }

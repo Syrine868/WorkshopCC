@@ -18,8 +18,8 @@ export class ListFeedbackComponent implements OnInit {
   listfeedbacks: any = [];
   feedbackgroup: FormGroup;
   feedback: FeedBack = new FeedBack();
-  badcolor = "red";
-  moycolor = "blue";
+  badcolor = "#842053";
+  moycolor = "#204484";
   goodcolor = "green";
 
   
@@ -33,5 +33,14 @@ export class ListFeedbackComponent implements OnInit {
   }
   );
   }
-
+  delete(id)
+  {
+    this.fs.feedbackdelete(id).subscribe(
+      res => {
+        alert("Votre feedback est supprimé");
+        this.router.navigateByUrl('/listefeedbacks');
+      }
+    );
+  }
+ 
 }

@@ -19,6 +19,7 @@ import { UpdateFeedbackComponent } from './update-feedback/update-feedback.compo
 import { ListFeedbackComponent } from './list-feedback/list-feedback.component';
 import { DetailsPlatsComponent } from './details-plats/details-plats.component';
 import { RestoComponent } from './resto/resto.component';
+import { Ng2SearchPipe, Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { RestoComponent } from './resto/resto.component';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

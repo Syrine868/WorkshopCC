@@ -6,29 +6,19 @@
     <title>Resto</title>
 </head>
 <body>
+    <div class="form-group w-25 mx-5 my-3">
+        <h4>Chercher Plat : </h4>
+        <input type="text" class="form-control my-3" for="inputLarge" placeholder="Chercher votre plat.." [(ngModel)]="term">
+     </div>
     <ul class="list-group">
 
-        <li class="list-group-item list-group-item-light" *ngFor="let typeplat of listTypePlats">
-                  <p>{{typeplat.nom | uppercase}} </p> 
-             <ul class="list-group mx-2">
-                 <li class="list-group-item list-group-item-primary" *ngFor="let plat of listPlats">
-                    <p>{{plat.nom}}</p>
-                    <ul class="list-group mx-4">
-                        <li class="list-group-item list-group-item-dark" *ngFor="let cm of listFeedbacks">
-                            FeedBack {{cm.id}} : {{cm.body}}
-                            Note : {{cm.note}}
-                        </li>
-                    </ul>
+      
+                 <li class="list-group-items btn btn-outline-primary w-50 my-3 align-self-center" *ngFor="let plat of listPlats | filter: term">
+                    <p class="text-info bold">{{plat.nom | uppercase}}</p>
+                    <p> Prix : {{plat.prix}} DT</p>
+                    <p>Type du plat : {{plat.type_plat}}</p>
                  </li>
-             </ul> 
-        </li>
-        <li class="list-group-item list-group-item-secondary"></li>
-        <li class="list-group-item list-group-item-success">This is a success list group item</li>
-        <li class="list-group-item list-group-item-danger">This is a danger list group item</li>
-        <li class="list-group-item list-group-item-warning">This is a warning list group item</li>
-        <li class="list-group-item list-group-item-info">This is a info list group item</li>
-        <li class="list-group-item list-group-item-light">This is a light list group item</li>
-        <li class="list-group-item list-group-item-dark">This is a dark list group item</li>
+           
 
       </ul>
 </body>
