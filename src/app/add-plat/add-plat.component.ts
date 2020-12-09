@@ -45,7 +45,7 @@ export class AddPlatComponent implements OnInit {
   save() {
     this.ps.addPlat(this.plat).subscribe(result => {
       alert("Un nouveau plat est ajouté dans la liste");
-     // this.router.navigateByUrl('/plats');
+      this.router.navigateByUrl('/plats');
     },
       (err) => {
         alert('Erreur ! Vérifiez vos informations');

@@ -17,7 +17,9 @@ import { UpdateTypePlatComponent } from './update-type-plat/update-type-plat.com
 
 
 const routes: Routes = [
-  { path: '', component:RestoComponent},
+  { path: '', component: RestoComponent },
+  { path: 'menu', component: MenuComponent },
+  { path: 'addmenu', component: AddMenuComponent },
   { path: 'plats', component: PlatsComponent },
   { path: 'feedbacks', component: FeedbackComponent },
   { path: 'deletemenu/:id', component: MenuComponent },
@@ -29,7 +31,8 @@ const routes: Routes = [
   { path: 'add-plat', component: AddPlatComponent },
   { path: 'listefeedbacks', component: ListFeedbackComponent },
   { path: 'detailsplat/:id', component: DetailsPlatsComponent },
-  {path: 'deletef/:id', component:ListFeedbackComponent}
+  { path: 'deletef/:id', component: ListFeedbackComponent },
+  { path : 'deleteplats/:id',component:DetailsPlatsComponent}
 ];
 
 @NgModule({

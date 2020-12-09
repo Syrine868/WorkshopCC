@@ -23,14 +23,13 @@
     </div>
     <br>
 
+ 
     Description :
-    <input class="form-control" formControlName="description" name="description" [(ngModel)]="typeplat.description" type="text">
-    <div *ngIf="description.errors?.minlength ">
-        <p class=" alert alert-warning" role="alert" >Au moins 10 caractéres</p>
-    </div>
-    <div *ngIf="description.errors?.maxlength ">
-        <p class=" alert alert-warning" role="alert" >Au plus 10 caractéres</p>
-    </div>
+    <input class="form-control" formControlName="description" name="description" placeholder="Description .." [(ngModel)]="typeplat.description"
+      type="text">
+      <div *ngIf="description.errors?.minlength ">
+        <p class=" alert alert-warning" role="alert">Au moins 4 caractéres</p>
+      </div>
     <br>
     <button class="btn btn-outline-info" (click)="update()" [disabled]="typePlatGroup.invalid">Sauvegarder</button>
 </fieldset>

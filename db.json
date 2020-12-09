@@ -1,151 +1,50 @@
 {
   "typeplat": [
     {
-      "nom": "the king",
-      "description": "the best type ever",
-      "id": 1
+      "id": 3,
+      "nom": "Pastas",
+      "description": "des pâtes délicieuses"
     },
     {
-      "nom": "Pasta",
-      "description": "the best type ever",
-      "id": 2
+      "id": 5,
+      "nom": "Petit déjeuner",
+      "description": "vivre à tunisie"
     }
   ],
   "plats": [
     {
-      "id": "1",
-      "nom": "couscous",
-      "prix": "200"
-    },
-    {
-      "id": "2",
-      "nom": "hamburger",
-      "prix": "20",
-      "type_plat": "2"
-    },
-    {
-      "id": "3",
-      "nom": "makloub",
-      "prix": "2500",
-      "type_plat": "2"
-    },
-    {
-      "id": "4",
-      "nom": "the king",
-      "prix": "2500",
-      "type_plat": "3"
-    },
-    {
-      "id": "5",
-      "nom": "Madfouna",
-      "prix": "50000",
-      "type_plat": "3"
-    },
-    {
       "nom": "Raviolli",
       "prix": "25000",
-      "type_plat": "2",
-      "id": "sqmAexD"
+      "type_plat": "Pastas",
+      "id": 1
     },
     {
       "nom": "Lasagne",
-      "prix": "2500",
-      "type_plat": "Pasta",
-      "id": "1Vn5_OP"
-    },
-    {
-      "nom": "Putanesca",
-      "prix": "25000",
-      "type_plat": "Pasta",
-      "id": "-5sjPs3"
+      "prix": "15000",
+      "type_plat": "Pastas",
+      "id": 3
     }
   ],
   "menu": [
     {
-      "nom_menu": "Soirée privé",
-      "plats_nom": "Hamburger",
-      "chef": "Syrine",
-      "id": 5
-    },
-    {
-      "nom_menu": "Soirée",
-      "plats_nom": "Putanesca",
-      "chef": "Syrine",
-      "id": 6
+      "id": 2,
+      "nom_menu": "Soirée public",
+      "plats_nom": "Tagliatelle ",
+      "chef": "Syrine"
     }
   ],
   "Feedback": [
     {
-      "body": "Plat n'est pas à la hauteur",
-      "note": 0,
-      "plat_id": "couscous",
-      "id": 1
-    },
-    {
-      "body": "mmmm bien",
+      "body": "j'ai aimé pas mal",
       "note": 3,
-      "plat_id": "hamburger",
-      "id": 2
-    },
-    {
-      "body": "mmmm délicieux",
-      "note": 2,
-      "plat_id": "makloub",
-      "id": 3
-    },
-    {
-      "body": "pas mauvais",
-      "note": 2,
-      "plat_id": "hamburger",
-      "id": 4
-    },
-    {
-      "body": "wwwwwwwwwwwwwow",
-      "note": 5,
-      "plat_id": "Madfouna",
+      "plat_id": "Raviolli",
       "id": 5
     },
     {
-      "body": "j'ai trop aimé",
-      "note": 5,
-      "plat_id": "Raviolli",
-      "id": 6
-    },
-    {
-      "body": "pas mauvais",
-      "note": 2,
-      "plat_id": "the king",
-      "id": 7
-    },
-    {
-      "body": "mmmm délicieux",
-      "note": 4,
-      "plat_id": "couscous",
-      "id": 8
-    },
-    {
-      "body": "j'ai aimé",
-      "note": 3,
-      "plat_id": "couscous",
-      "id": 9
-    },
-    {
-      "body": "nonnnnnnnnnnnn",
-      "note": null,
-      "plat_id": "couscous",
-      "id": 11
-    },
-    {
-      "body": "WOOW DELICIEUXXXXXXXX",
+      "body": "j'ai trop aimée",
       "note": 5,
       "plat_id": "Lasagne",
-      "id": 12
-    },
-    {
-      "body": "J'ai aimée ce plat ",
-      "note": 4,
-      "plat_id": "Putanesca",
-      "id": 13
+      "id": 6
     }
   ]
 }

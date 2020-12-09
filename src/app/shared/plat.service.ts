@@ -18,14 +18,6 @@ export class PlatService {
 
   constructor(private http: HttpClient) { }
 
-  getMenu(): Observable<Object> {
-    return this.http.get<Object>('http://localhost:3000/menu');
-  }
-
-
- 
-
-
   addPlat(plat: Plat): Observable<Plat> {
     return this.http.post<Plat>(this.platUrl, plat, this.httpOptions);
   }

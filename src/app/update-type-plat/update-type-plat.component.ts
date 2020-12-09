@@ -28,7 +28,7 @@ export class UpdateTypePlatComponent implements OnInit {
     this.typePlatGroup = this.typePlatForm.group({
       id: new FormControl('', Validators.required),
       nom:  new FormControl('', [Validators.required, Validators.minLength(3)]),
-      description:  new FormControl('',[Validators.minLength(10),Validators.maxLength(10)] )
+      description:  new FormControl('',Validators.minLength(4) )
     });
   }
 

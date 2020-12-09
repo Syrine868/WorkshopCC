@@ -16,7 +16,7 @@
       <h2>Type Plat</h2>
       {{item.id}}
       <p class="mb-0">{{item.nom}}</p>
-      <footer class="blockquote-footer">Chef Mr. <cite title="Source Title"> {{item.description}}</cite></footer>
+      <footer class="blockquote-footer">Description <cite title="Source Title"> {{item.description}}</cite></footer>
       <div class="container_btns">
         <a [routerLink]=" [ '/deleteyps/' , item.id ] "><button (click)="delete(item.id)"
             class="btn btn-outline-primary"> <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-trash"

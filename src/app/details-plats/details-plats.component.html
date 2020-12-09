@@ -2,7 +2,7 @@
     <div class="list-group my-5 w-50 " >
     
   
-        <a  class="list-group-item list-group-item-action flex-column align-items-start active">
+        <a  class="list-group-item list-group-item-action flex-column align-items-start active" [routerLink]="['/deleteplats/',plat.id]">
           <div class=" w-100 justify-content-between">
             <h2>Détails :</h2>
             
@@ -10,6 +10,7 @@
             <small>{{plat.id}}</small>
           </div>
           <p class="mb-1">{{plat.nom | uppercase}} </p>
+          <button (click)="delete(plat.id)" class="btn btn-outline-light">Supprimer</button>
         </a>
         </div>
   </div>
